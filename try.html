@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porto Is</title>
+    <style>
+        .footer{
+            display; block;
+            position: relative;
+            background-color: none;
+            width: 100%;
+           padding: 10px 10px;
+            
+        }
+       
+    .media{
+  background-color: rgb(49, 44, 42);
+  width: 100%;
+  padding: 2em 0 1em;
+  margin: 2em  0 1em;
+}
+.media_img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid pink;
+  margin: 0 auto;
+  border-top: tomato;
+}
+   
+    ul. li {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    }
+    ul.li a {
+    display: block;
+    padding: 5px 10px;
+    }
+    .menu ul li:hover ul.submenu {
+    display: block;
+    }
+    .container {
+        width: 800px;
+        margin: 0 auto;
+    }
+    .header {
+    background-color: none;
+    min-height: 50px;
+    text-align: center;
+    color:antiquewhite;
+    }
+    
+    .jumbotron {
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    text-align: center;
+    font-color: rgb(214, 202, 202);
+    font-size: 50px;
+    background-image: url(https://www.wallpapertip.com/wmimgs/205-2057588_fraktal-merah-hitam-gelap-abstraksi.jpg);
+    background-size: cover;
+    position: absolute;
+     border: 1px solid #ccc;}
+     .moving-text{
+         text-align:center;
+         font-size: 30px;
+         font-family: fantasy;
+         color:rgb(255, 0, 34); 
+         background-color: rgb(12, 3, 92);
+         border-bottom: turquoise;
+  width: 100%;
+  padding: 1em 0 1em;
+  margin: 1em  0 1em;
+     }
+     .moving-text{
+    position: relative;
+    animation: moveText 4s linear infinite;
+  }
+
+  @keyframes moveText{
+    0% { left: 0; }
+    100% { left: 100%; }
+  }
+  #clock {
+    font-size: 24px;
+  }
+  .slideshow-container {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+  }
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next {
+    right: 0;
+  }
+  .tulisan{
+      background: url(https://tse4.mm.bing.net/th?id=OIP.nIbZHfD_mS-FQAILy7FGkAHaNK&pid=Api&P=0&w=300&h=300);
+  }
+     </style>
+</head>
+<body>
+   
+    
+    <div class="jumbotron">
+        <fieldset>
+        <div class="moving-text">
+    
+        <h1><i>W e l c o m e ! !</i></h1>
+        </div>
+        </fieldset>
+        
+        <div class="header">
+            <div class="logo">
+                <img id="gambar" src="is.jpg" alt="Gambar Anda">
+            </div>
+    <div>
+        <header class="header">
+            <h1 class="title" id="title"> Isma Rahmawati</h1>
+            <p class="title-description"> SMKN 10 SMG student</p> 
+            <div id="clock">
+                00:00:00
+              </div>
+              
+              <script>
+              function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                
+                const timeString = `${hours}:${minutes}:${seconds}`;
+                
+                document.getElementById('clock').textContent = timeString;
+              }
+              
+              updateClock();
+              setInterval(updateClock, 1000);
+              </script>
+            <figure class="media" id="div-img">
+                <!--src pertemuan depan kita kita isi dengan foto masing2-->
+            <figcaption>
+                <h5>hello, I am a student at SMKN 10 SEMARANG majoring in RPL. i have studied HTML, CSS, JS.</h5>
+            </figcaption>
+            </figure>
+        <div class=""></div>
+    </div>
+   
+    <main id="main" class="main">
+          
+          <fieldset>
+        </header><!--buat tag artikel dibawah/header-->
+        <article class="tribute-info" id="tribute-info"></article>
+        <h3 class="headline"> Irarana's journey</h3><!--diisi nama sendiri-->
+        <ul class="list-of-time"><!--diisi riwayat hidup masing2-->
+            <li><time class="time">2007 - born in Solo</time></li>
+            <li><time class="time">2011 - join tk wismasari </time></li>
+            <li><time class="time"> 2013 - join SDN NGALIYAN 03</time></li>
+            <li><time class="time"> 2019 - join SMPN 18 SMG</time></li>
+            <li><time class="time"> 2022 - JOIN SMKN 10 SMG </time></li>
+            </ul>
+            
+            
+            <canvas id="tataSuryaCanvas" width="800" height="600"></canvas>
+  
+            <script>
+              var canvas = document.getElementById('tataSuryaCanvas');
+              var ctx = canvas.getContext('2d');
+              
+              // Ukuran dan jarak relatif planet-planet (semua dalam skala sederhana)
+              var sunRadius = 40;
+              var planetDistances = [60, 100, 150, 200, 260, 320, 380];
+              var planetRadii = [5, 7, 10, 12, 15, 18, 20];
+              var planetColors = ['gray', 'blue', 'orange', 'red', 'yellow', 'green', 'purple'];
+              
+              function drawPlanet(x, y, radius, color) {
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, Math.PI * 2);
+                ctx.fillStyle = color;
+                ctx.fill();
+                ctx.closePath();
+              }
+              
+              function drawTataSurya() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height); // Membersihkan canvas
+                
+                var centerX = canvas.width / 2;
+                var centerY = canvas.height / 2;
+                
+                // Menggambar Matahari
+                drawPlanet(centerX, centerY, sunRadius, 'yellow');
+                
+                // Menggambar planet-planet
+                for (var i = 0; i < planetDistances.length; i++) {
+                  var angle = Date.now() * 0.0001 * (i + 1); // Sudut rotasi planet (bergantung pada waktu)
+                  var x = centerX + planetDistances[i] * Math.cos(angle);
+                  var y = centerY + planetDistances[i] * Math.sin(angle);
+                  
+                  drawPlanet(x, y, planetRadii[i], planetColors[i]);
+                }
+                
+                requestAnimationFrame(drawTataSurya);
+              }
+              
+              drawTataSurya(); // Memulai animasi Tata Surya
+            </script>
+            </fieldset>
+            <div class="tulisan">
+            <h3 id="tulisan" style="font-size: 24px;">MY FAVORITE
+            </h3>
+            <p  id="tulisan" style="font-size: 24px;"> my hobbies are drawing, exercising, but lately I've been reading more novels and some coding.</p>
+            <script>
+              var tulisanElement = document.getElementById('tulisan');
+              
+              function toggleVisibility() {
+                if (tulisanElement.style.visibility === 'hidden') {
+                  tulisanElement.style.visibility = 'visible';
+                } else {
+                  tulisanElement.style.visibility = 'hidden';
+                }
+              }
+              
+              setInterval(toggleVisibility, 500); // Mengganti visibilitas setiap 500 milidetik
+            </script>
+            </div>
+            <footer>
+            <div class="footer">
+                <p> COPYRIGHT ALL RIGHT RESERVED
+                <a class="tribute-link" id="tribute-link" href="https: //github.com/Isma-XIRPL2" target="_blank">ISMA-XIRPL2<!-- href nnti diisi link profil github--></a>
+                </p>
+                <!-- linknya didalam tag p-->
+                <div>
+                          <img src="https://clipground.com/images/ig-png-2.png" height="40px" width="40px"></a><br>
+                          <a class="tribute-link" id="tribute-link" href="https://www.instagram.com/frismarahmawati/" target="_blank" >Instagram</a>
+                </div>    
+                <div>
+                          <img src="https://freepngimg.com/download/logo/69840-and-icons-computer-facebook-logo-white-black.png" height="40px" width="40px"/><a><br>
+                            <a class="tribute-link" id="tribute-link" href=https://www.facebook.com/isma.rahmawati.336" target="_blank" >Facebook</a>
+                 </div>       
+                 <div>      
+                          <img src="https://tse4.mm.bing.net/th?id=OIP.8SVgggxQcO5L6Dw_61ac4QHaEK&pid=Api&P=0&h=220" height="40px" width="40px" /></a><br>
+                          <a class="tribute-link" id="tribute-link" href="https://github.com/ismaxirpl2" target="_blank" >Github</a>
+                </div>
+                
+            </footer>
+            </div>
+</body>
+</html>
